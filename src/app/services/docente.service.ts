@@ -12,7 +12,10 @@ export class DocenteService {
 
   constructor(private http: HttpClient) { }
 
-
+  listaDocente(nombre:string, dni:string, idUbigeo: number, estado : number, fecIni:string, fecFin:string): Observable<any>{
+    const params = new HttpParams().set("nombre", nombre).set("dni", dni).set("idUbigeo", idUbigeo).set("estado", estado).set("fechaInicio", fecIni).set("fechaFin", fecFin);  
+    return this.http.get(baseUrl + "/listaDocenteConParametros", {params});
+  }
   
 }
 

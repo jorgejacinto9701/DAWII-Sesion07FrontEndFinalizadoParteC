@@ -17,8 +17,10 @@ export class ConsultaDocenteComponent implements OnInit {
   selDepartamento:string = "-1"; 
   selProvincia:string = "-1"; 
   selDistrito:number = -1;
-  estado:number = -1;
-  
+  estado:boolean = true;
+  fechaInicio:string="";
+  fechaFin:string="";
+
   //Ubigeo
   departamentos: string[]  = [];
   provincias: string[]  = [];
